@@ -5,7 +5,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
-    android:background="#006699">
+    android:background="#fbfbfb">
 
 
 
@@ -17,58 +17,104 @@
         android:id="@+id/LogoText"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="40dp"
-        android:textColor="#FFFFFF" />
+        android:textColor="@color/colorPrimary" />
 
 
-    <CheckBox
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/select1"
+        android:id="@+id/textView"
+        android:textColor="#070606"
+        android:layout_above="@+id/checkBox61"
+        android:layout_toLeftOf="@+id/checkBox51"
+        android:layout_alignTop="@+id/checkBox51"
+        android:layout_alignLeft="@+id/LogoText"
+        android:layout_alignStart="@+id/LogoText"
+        android:editable="false"
+        android:gravity="center" />
+
+    <com.hanks.library.AnimateCheckBox
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:padding="5dp"
+
         android:text="@string/select1"
         android:id="@+id/checkBox51"
-        android:layout_marginTop="41dp"
         android:checked="false"
         android:layout_below="@+id/LogoText"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignLeft="@+id/checkBox61"
+        android:layout_alignStart="@+id/checkBox61" />
 
-    <CheckBox
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/select2"
+        android:id="@+id/textView3"
+        android:textColor="#070606"
+        android:layout_alignBottom="@+id/checkBox61"
+        android:layout_toLeftOf="@+id/checkBox51"
+        android:layout_alignLeft="@+id/PlusNumber"
+        android:layout_alignStart="@+id/PlusNumber"
+        android:layout_below="@+id/textView"
+        android:gravity="center" />
+
+    <com.hanks.library.AnimateCheckBox
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:padding="5dp"
+
         android:text="@string/select2"
         android:id="@+id/checkBox61"
         android:checked="true"
         android:layout_below="@+id/checkBox51"
-        android:layout_alignLeft="@+id/checkBox51"
-        android:layout_alignStart="@+id/checkBox51" />
+        android:layout_alignLeft="@+id/checkBoxPlus"
+        android:layout_alignStart="@+id/checkBoxPlus" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/StartPlay"
-        android:id="@+id/StartBtn"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
 
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+
+
+    <com.hanks.library.AnimateCheckBox
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:padding="5dp"
+
         android:id="@+id/checkBoxPlus"
         android:layout_below="@+id/checkBox61"
-        android:layout_alignLeft="@+id/checkBox61"
-        android:layout_alignStart="@+id/checkBox61" />
+        android:layout_alignRight="@+id/LogoText"
+        android:layout_alignEnd="@+id/LogoText" />
+
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="numberSigned"
+        android:inputType="number|numberSigned"
         android:textSize="15dp"
+        android:padding="5dp"
+
         android:ems="10"
         android:id="@+id/PlusNumber"
         android:editable="true"
         android:focusable="false"
         android:layout_alignBottom="@+id/checkBoxPlus"
-        android:layout_toRightOf="@+id/checkBoxPlus"
-        android:layout_alignRight="@+id/StartBtn"
-        android:layout_alignEnd="@+id/StartBtn" />
+        android:layout_alignLeft="@+id/LogoText"
+        android:layout_alignStart="@+id/LogoText"
+        android:layout_toLeftOf="@+id/checkBoxPlus"
+        android:layout_toStartOf="@+id/checkBoxPlus"
+        android:layout_alignTop="@+id/checkBoxPlus"
+        android:gravity="center" />
+    <com.dd.morphingbutton.MorphingButton
+        android:id="@+id/StartBtn"
+        android:layout_width="@dimen/mb_width_200"
+        android:layout_height="@dimen/mb_height_56"
+        android:textColor="@color/mb_white"
+        android:text="@string/StartPlay"
+        android:background="@color/mb_blue"
+        android:layout_marginTop="44dp"
+        android:layout_below="@+id/checkBoxPlus"
+        android:layout_centerHorizontal="true" />
 
 
 </RelativeLayout>

@@ -13,6 +13,8 @@ android {
     }
     repositories {
         mavenCentral()
+        jcenter()
+
         maven {
 
             url "https://jitpack.io"
@@ -36,4 +38,8 @@ dependencies {
         transitive = true;
     }
     compile 'com.github.coyarzun89:fabtransitionactivity:0.1.1'
+    compile 'com.github.dmytrodanylyk:android-morphing-button:98a4986e56' // commit hash
+    compile 'com.hanks.animatecheckbox:library:0.1'
+
+
 }

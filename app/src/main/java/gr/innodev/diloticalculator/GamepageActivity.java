@@ -10,6 +10,8 @@ import android.media.Ringtone;
 import android.media.RingtoneManager;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.annotation.ColorRes;
+import android.support.annotation.DimenRes;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
@@ -19,6 +21,8 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.Spinner;
 import android.widget.TextView;
+
+import com.dd.morphingbutton.MorphingButton;
 
 import java.io.IOException;
 import java.lang.reflect.Array;
@@ -36,7 +40,12 @@ import javax.xml.datatype.Duration;
 
 
 public class GamepageActivity extends AppCompatActivity {
-
+    public int dimen(@DimenRes int resId) {
+        return (int) getResources().getDimension(resId);
+    }
+    public int color(@ColorRes int resId) {
+        return getResources().getColor(resId);
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -372,6 +381,7 @@ public class GamepageActivity extends AppCompatActivity {
                 new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
                         finish();
+
                     }
                 });
         // Setting Negative "NO" Button
