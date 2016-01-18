@@ -1,0 +1,53 @@
+<resources>
+    <string name="app_name">Δηλωτή counter</string>
+    <string name="logoName">Δηλωτή counter</string>
+    <string name="StartPlay">ΞΕΚΙΝΑ !</string>
+    <string name="select2">61</string>
+    <string name="select1">51</string>
+    <string name="ChooseGame">Διάλεξε παιχνίδι</string>
+    <string name="TeamA">Ομάδα Α</string>
+    <string name="TeamB">Ομάδα Β</string>
+    <string name="AddScore">Προσθήκη Score</string>
+
+    <string name="score_label"></string>
+
+    <string-array name="score_arrays">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+    </string-array>
+    <string-array name="score_cut_arrays">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+
+    </string-array>
+    <string-array name="score_kseres">
+    <item>0</item>
+    <item>1</item>
+    <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
+
+</resources>

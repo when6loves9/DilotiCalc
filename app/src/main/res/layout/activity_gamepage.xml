@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/AddScore"
+        android:id="@+id/addScore"
+        android:layout_marginBottom="82dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:width="120dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/TeamA"
+        android:id="@+id/TeamA"
+        android:layout_marginTop="47dp"
+        android:textAlignment="center"
+        android:width="100dp"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/addScore"
+        android:layout_toStartOf="@+id/addScore" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/TeamB"
+        android:id="@+id/TeamB"
+        android:layout_alignTop="@+id/TeamA"
+        android:layout_toRightOf="@+id/addScore"
+        android:layout_toEndOf="@+id/addScore"
+        android:width="100dp"
+        android:textAlignment="center" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="0"
+        android:id="@+id/TeamAscore"
+        android:layout_below="@+id/TeamA"
+        android:layout_alignRight="@+id/TeamA"
+        android:layout_alignEnd="@+id/TeamA"
+        android:layout_marginTop="50dp"
+        android:textColor="#50a2be"
+        android:textAlignment="center"
+        android:width="100dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="0"
+        android:id="@+id/TeamBscore"
+        android:layout_alignTop="@+id/TeamAscore"
+        android:layout_alignRight="@+id/TeamB"
+        android:layout_alignEnd="@+id/TeamB"
+        android:textColor="#FF50A2BE"
+        android:width="100dp"
+        android:textAlignment="center" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/TeamAScoreSelect"
+        android:entries="@array/score_arrays"
+        android:prompt="@string/score_label"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/TeamAscore"
+        android:layout_alignStart="@+id/TeamAscore"
+        android:layout_toLeftOf="@+id/addScore"
+        android:layout_toStartOf="@+id/addScore" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/TeamBScoreSelect"
+        android:layout_alignBottom="@+id/TeamAScoreSelect"
+        android:layout_alignRight="@+id/TeamBscore"
+        android:layout_alignEnd="@+id/TeamBscore"
+        android:layout_toRightOf="@+id/addScore"
+        android:layout_toEndOf="@+id/addScore"
+        android:entries="@array/score_arrays"
+        android:prompt="@string/score_label"/>
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Κομμένα Φύλλα"
+        android:id="@+id/cutCards"
+        android:layout_below="@+id/TeamAscore"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="38dp" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/minusA"
+        android:height="50dp"
+        android:width="50dp"
+        android:layout_above="@+id/addScore"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:text="-" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:id="@+id/kseresA"
+        android:width="50dp"
+        android:height="50dp"
+        android:layout_toRightOf="@+id/minusA"
+        android:layout_toEndOf="@+id/minusA"
+        android:text="+10"
+        android:textAlignment="center"
+        android:textColor="#b3b2b2"
+        android:textSize="20dp"
+        android:layout_alignTop="@+id/minusA"
+        android:layout_alignBottom="@+id/minusA"
+        android:paddingTop="10dp" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/plusA"
+        android:layout_alignBottom="@+id/minusA"
+        android:layout_toRightOf="@+id/kseresA"
+        android:width="50dp"
+        android:height="50dp"
+        android:text="+" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/minusB"
+        android:height="50dp"
+        android:width="50dp"
+        android:text="-"
+        android:layout_above="@+id/addScore"
+        android:layout_toLeftOf="@+id/kseresB"
+        android:layout_toStartOf="@+id/kseresB" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:id="@+id/kseresB"
+        android:width="50dp"
+        android:height="50dp"
+        android:text="+10"
+        android:textAlignment="center"
+        android:textColor="#b3b2b2"
+        android:textSize="20dp"
+        android:paddingTop="10dp"
+        android:layout_below="@+id/textView2"
+        android:layout_toLeftOf="@+id/plusB"
+        android:layout_toStartOf="@+id/plusB" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/plusB"
+        android:width="50dp"
+        android:height="50dp"
+        android:text="+"
+        android:layout_alignTop="@+id/minusB"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Ξερές Α ομάδας"
+        android:id="@+id/textView1"
+        android:height="25dp"
+        android:textAlignment="center"
+        android:layout_above="@+id/minusA" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Ξερές Β ομάδας"
+        android:id="@+id/textView2"
+        android:height="25dp"
+        android:textAlignment="center"
+        android:layout_above="@+id/minusB"
+        android:layout_alignLeft="@+id/minusB"
+        android:layout_alignStart="@+id/minusB" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/gameTxt"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textColor="#5095b0"
+        android:textAlignment="center" />
+</RelativeLayout>
